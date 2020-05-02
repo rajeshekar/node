@@ -2,12 +2,12 @@ sudo: required
 services:
     - docker
 script:
-    - docker build -t mannydesigns/node . 
+    - docker build -t rajeshekar/node .
     - docker images mannydesigns/node
 before_deploy:
     - docker login -u rajeshekar -p Rishitha@369
 deploy:
     provider: script
-    script: docker push mannydesigns/node
+    script: docker push rajeshekar/node
     on:
       branch: master
