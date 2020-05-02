@@ -5,7 +5,7 @@ script:
     - docker build -t mannydesigns/node . 
     - docker images mannydesigns/node
 before_deploy:
-    - docker login -u rajeshekar Rishitha@369
+    - docker login -u rajeshekar -p Rishitha@369
 deploy:
     provider: script
     script: docker push mannydesigns/node
